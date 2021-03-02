@@ -10,7 +10,9 @@ Ensure MATPOWER 6.0 or later has been installed on your MATLAB.
 The paper is present at
 J. Zhang, Y. Wang, Y. Weng and N. Zhang, "Topology Identification and Line Parameter Estimation for Non-PMU Distribution Network: A Numerical Method," in IEEE Transactions on Smart Grid, vol. 11, no. 5, pp. 4440-4453, Sept. 2020, doi: 10.1109/TSG.2020.2979368. https://ieeexplore.ieee.org/document/9027950 
 
-The current code shows a simplified and kernel version of the proposed model. case1github.mat and case1github2.mat show a example data and results, with simular setups in the paper. 
+## Example
+The current code shows a simplified and kernel version of the proposed model. **case1github.mat** and **case1github2.mat** show example data and results, with simular setups in the paper. 
+### setups
 ```
 P, Q additional error err  = 0.01; 
 
@@ -32,7 +34,8 @@ xi = 0.05;                % threshold to remove branches
 varphi = 1*10^-10;        % decide whether to end iterations
 ```
 
-case1github2.mat outputs. simular setups with case 1 in the paper.
+**case1github2.mat outputs. simular setups with case 1 in the paper.**
+### Outputs:
 ```
 >> identification
 [Identification] Programme starts .........
@@ -88,3 +91,13 @@ MAPE: g: 0.606687%, b: 0.573381%; Wrong branch +/-: 0,0
 时间已过 416.990129 秒。
 [Identification] Programme successfully ends .........
 ```
+## Exist issues
+1. There might be larger estimation errors, when pf.tol>10e-4. This is result from the collinear problem of voltage measurements. In simple words, the voltage records are too simular among datasets. Not algorithms' faults.
+2. Experiences on tunning super-parameters are required, especially in case 1 and 3 in the paper. It may influence the accuray and correctness of parameter estimation and topology identification.
+3. The performance of the algorithm is related to the quality of datasets. Low colinear and high accurate data is welcomed.
+4. We have improved the algorithm into linear form, and the paper is under review. No speed problem later.
+
+## About the usage of the code
+You can use the code in your paper/ degree thesis as control groups, comparisons, or part of your methods. Please cite our paper.
+Yet, the licence of this code does not cover the paper on IEEE trans. Smart Grid. Do not copy words, figures, or tables to your paper.
+The ideas and code of this paper should not be a major part of your innovative article (contribution greater than 20%).  We do not welcome or allow the plagiarism restricted by IEEE regulations.
