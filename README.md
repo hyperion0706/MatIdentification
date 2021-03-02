@@ -29,3 +29,5 @@ varsigma = 0.01;          % decide whether to remove branches
 xi = 0.05;                % threshold to remove branches
 
 varphi = 1*10^-10;        % decide whether to end iterations
+
+gberror = [0.903385475352528,1.151643363559491]%
