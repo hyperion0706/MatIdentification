@@ -10,6 +10,8 @@ Ensure MATPOWER 6.0 or later has been installed on your MATLAB.
 The paper is present at
 J. Zhang, Y. Wang, Y. Weng and N. Zhang, "Topology Identification and Line Parameter Estimation for Non-PMU Distribution Network: A Numerical Method," in IEEE Transactions on Smart Grid, vol. 11, no. 5, pp. 4440-4453, Sept. 2020, doi: 10.1109/TSG.2020.2979368. https://ieeexplore.ieee.org/document/9027950 
 
+This code is refactored after the paper accepted, and the performance is a bit different from that in the paper. The current version is more fast and clear to read, so I put it here.
+
 ## Example
 The current code shows a simplified and kernel version of the proposed model. **case1github.mat** and **case1github2.mat** show example data and results, with simular setups in the paper. 
 ### setups
@@ -92,7 +94,7 @@ MAPE: g: 0.606687%, b: 0.573381%; Wrong branch +/-: 0,0
 [Identification] Programme successfully ends .........
 ```
 ## Exist issues
-1. There might be larger estimation errors, when pf.tol>10e-4. This is result from the collinear problem of voltage measurements. In simple words, the voltage records are too simular among datasets. Not algorithms' faults. The method works well when pf.tol <= 10-3, there are some cases start with case1githubXX.mat. Yet the algorithm fails to coverage when pf.tol>=10-2, due to basic identification fails to give rough estimations.
+1. There might be larger estimation errors, when pf.tol>10e-4. This is result from the collinear problem of voltage measurements. In simple words, the voltage records are too simular among datasets. Not algorithms' faults. The method works well when pf.tol <= 10-3, there are some cases start with **case1githubXX.mat**. Yet the algorithm fails to coverage when pf.tol>=10-2, due to basic identification fails to give rough estimations.
 2. Experiences on tunning super-parameters are required, especially in case 1 and 3 in the paper. It may influence the accuray and correctness of parameter estimation and topology identification.
 3. The performance of the algorithm is related to the quality of datasets. Low colinear and high accurate data is welcomed.
 4. We have improved the algorithm into linear form, and the paper is under review. No speed problem later.
