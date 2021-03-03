@@ -92,7 +92,7 @@ MAPE: g: 0.606687%, b: 0.573381%; Wrong branch +/-: 0,0
 [Identification] Programme successfully ends .........
 ```
 ## Exist issues
-1. There might be larger estimation errors, when pf.tol>10e-4. This is result from the collinear problem of voltage measurements. In simple words, the voltage records are too simular among datasets. Not algorithms' faults.
+1. There might be larger estimation errors, when pf.tol>10e-4. This is result from the collinear problem of voltage measurements. In simple words, the voltage records are too simular among datasets. Not algorithms' faults. The method works well when pf.tol <= 10-3, there are some cases start with case1githubXX.mat. Yet the algorithm fails to coverage when pf.tol>=10-2, due to basic identification fails to give rough estimations.
 2. Experiences on tunning super-parameters are required, especially in case 1 and 3 in the paper. It may influence the accuray and correctness of parameter estimation and topology identification.
 3. The performance of the algorithm is related to the quality of datasets. Low colinear and high accurate data is welcomed.
 4. We have improved the algorithm into linear form, and the paper is under review. No speed problem later.
