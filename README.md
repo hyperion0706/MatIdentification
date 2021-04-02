@@ -18,7 +18,8 @@ The current code shows a simplified and kernel version of the proposed model. **
 ```
 P, Q additional error err  = 0.01; 
 
-V error, added by reducing pf.tol on MATPOWER, tol = 10^-5; -> 0.01%-level error
+V error, added by reducing pf.tol on MATPOWER, tol = 10^-5; -> 0.01% error
+(in the paper, tol is set as 1e-6 (Conservatively), and theoretically, V's error is X*e-6, X in 0-10. 0.01 level error (higher bound 10-4, in statistics) usually fall around 1e-5 in real voltage measurements. )
 
 24*5 datasets, freq = 1/5;
  case1github.mat select last 30 datasets for step 2.
