@@ -19,7 +19,7 @@ The current code shows a simplified and kernel version of the proposed model. **
 P, Q additional error err  = 0.01; 
 
 V error, added by reducing pf.tol on MATPOWER, tol = 10^-5; -> 0.01% error
-(in the paper, tol is set as 1e-6 (Conservatively), and theoretically, V's error is X*e-6, X in 0-10. 0.01 level error (higher bound 10-4, in statistics) usually fall around 1e-5 in real voltage measurements. )
+(0.01 level error (higher bound 10-4, in statistics) usually fall around 1e-5 in real voltage measurements. )
 
 24*5 datasets, freq = 1/5;
  case1github.mat select last 30 datasets for step 2.
@@ -100,7 +100,7 @@ MAPE: g: 0.606687%, b: 0.573381%; Wrong branch +/-: 0,0
 1. There might be larger estimation errors, when pf.tol>10e-4. This is result from the collinear problem of voltage measurements. In simple words, the voltage records are too simular among datasets. Not algorithms' faults. The method works well when pf.tol <= 10-3, there are some cases start with **case1githubXX.mat**. Yet the algorithm fails to coverage when pf.tol>=10-2, due to basic identification fails to give rough estimations.
 2. Experiences on tunning super-parameters are required, especially in case 1 and 3 in the paper. It may influence the accuray and correctness of parameter estimation and topology identification.
 3. The performance of the algorithm is related to the quality of datasets. Low colinear and high accurate data is welcomed.
-4. We have improved the algorithm into linear form, and the paper is under review. No speed problem later.
+4. We have improved the algorithm into linear form, and the paper is under review. No speed problem later. https://ieeexplore.ieee.org/document/9459535
 
 ## About the usage of the code
 You can use the code in your paper/ degree thesis as control groups, comparisons, or part of your methods. Please cite our paper.
