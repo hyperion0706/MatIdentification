@@ -39,8 +39,8 @@ xi = 0.05;                % threshold to remove branches
 varphi = 1*10^-10;        % decide whether to end iterations
 ```
 
-**case1github2.mat outputs. simular setups with case 1 in the paper.**
-This file is too big, and if you want the data, please contact me.
+~~case1github2.mat outputs. simular setups with case 1 in the paper. This file is too big, and if you want the data, please contact me.~~ 
+Don't contact me. The code is archived.
 
 ### Outputs:
 ```
