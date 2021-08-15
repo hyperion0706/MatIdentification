@@ -1,4 +1,5 @@
 # MatIdentification
+(Archived: This code has been written for a long time, so it is no longer maintained.)
 ## introduction
 Electrical Engineering: A tool to identify topology and parameters of a distribution network in Matlab.
 
@@ -10,7 +11,8 @@ Ensure MATPOWER 6.0 or later has been installed on your MATLAB.
 The paper is present at
 J. Zhang, Y. Wang, Y. Weng and N. Zhang, "Topology Identification and Line Parameter Estimation for Non-PMU Distribution Network: A Numerical Method," in IEEE Transactions on Smart Grid, vol. 11, no. 5, pp. 4440-4453, Sept. 2020, doi: 10.1109/TSG.2020.2979368. https://ieeexplore.ieee.org/document/9027950 
 
-This code is refactored after the paper accepted, and the performance is a bit different from that in the paper. The current version is more fast and clear to read, so I put it here.
+This code is refactored after the paper accepted, and the settings and performances are a bit different from that in the paper. 
+The current version is more fast and clear to read, so I put it here.
 
 ## Example
 The current code shows a simplified and kernel version of the proposed model. **case1github.mat** and **case1github2.mat** show example data and results, with simular setups in the paper. 
