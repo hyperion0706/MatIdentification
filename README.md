@@ -14,6 +14,8 @@ J. Zhang, Y. Wang, Y. Weng and N. Zhang, "Topology Identification and Line Param
 This code is refactored after the paper accepted, and the settings and performances are a bit different from that in the paper. 
 The current version is more fast and clear to read, so I put it here.
 
+**IEEE33BUSEG.m** is the looped case in TSG paper.
+
 ## Example
 The current code shows a simplified and kernel version of the proposed model. **case1github.mat** and **case1github2.mat** show example data and results, with simular setups in the paper. 
 ### setups
