@@ -30,7 +30,8 @@ V error, added by reducing pf.tol on MATPOWER, tol = 10^-5; -> 0.01% error USE m
  case1github2.mat select all 120 dataset.
 ```
 V error MAE on each bus, in **case1github_tol_1e-5_err_0.02_freq_5.mat**
-![MAE](MAE of voltage.jpg)
+
+![MAE](https://github.com/AmateurZhang/MatIdentification/blob/master/MAE%20of%20voltage.jpg)
 Other parameters:
 ```
 pect = 0.01;                                    % gammar: remove branch thro
