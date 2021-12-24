@@ -89,8 +89,8 @@ classdef pqloads<matlab.mixin.Copyable
             u = 1;
             for i  = 1:obj.bus              
                 intp0 = interp1(obj.halftlist,htp(i,:),interplist);
-                intp = intp0*0.3;
-                intq = intp0*0.12;
+                intp = intp0*(0.3+ 0.1*randn());
+                intq = intp0*(0.12+ 0.1*randn());
              
                 [li,~] = ismember(i, loclist);
                 intprenew = [];
@@ -177,25 +177,21 @@ classdef pqloads<matlab.mixin.Copyable
                 mpf1.bus(2:obj.bus+1,3) = obj.interploadlist(:,i);
                 mpf1.bus(2:obj.bus+1,4) = obj.interqloadlist(:,i);
                 mpopt = mpoption('verbose',0,'out.all',0);
-                q_stand = (runpf(mpf1,mpopt)); %�껯
+                q_stand = (runpf(mpf1,mpopt)); %标化
                 
                 
                 mpopt.pf.tol = obj.tol;
-                
+                mpopt.pf.alg = 'GS';
                 q = (runpf(mpf1,mpopt));
                 
                 for k = 2:obj.bus+1
                     q.bus(k,3) =  q.bus(k,3)*(1+obj.err*randn());
-                     
                 end
                 
                 for k = 2:obj.bus+1
                    q.bus(k,4) =  q.bus(k,4)*(1+obj.err*randn());
                 end
-%                 for k = 2:obj.bus+1
-%                    q.bus(k,8) =  q.bus(k,8)+0.00001*randn();
-%                 end
-% %                 
+           
                 qlist = [qlist q];
                 qstlist = [qstlist q_stand];
             end
