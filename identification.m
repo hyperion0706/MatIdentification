@@ -3,24 +3,23 @@ clear;
 fprintf('[Identification] Programme starts .........\n')
 %% import data
 fprintf('[Identification] Data processing .........\n')
-pf = loadcase('case33bw');                % test case
+pf = loadcase('IEEE33BUSEG');                % test case
 load = readLD;                                  % power load origin file
-freq = 1/10;                                    % times per hour
+freq = 1/25;                                    % times per hour
 err  = 0.001;                                   % additional error
-tol = 10^-8;                                    % tol for ac flow calculation
+tol = 10^-5;                                    % tol for ac flow calculation
 qlist = data_processing(pf,load,freq,err,tol);  % build datasets
 
 
 %% Basic identification
 fprintf('[Identification] Basic identification .........\n')
-pect = 0.03;                                    % gammar: remove branch thro
+pect = 0.05;                                    % gammar: remove branch thro
 thro = 10^-8;                                   % decide stop basic identification
 [mpfn,flag] = basicidentify(qlist,pect,thro);   % basic identification
                                                 % flag == 0: wrong topo
                                                 % detected
 if flag == 0
     fprintf('[Basic identification] Wrong topology detected. REDUCE PECT!\n We terminate the programme to save time\n')
-    quit();
 end
 tic;
 %% select last 30 data
