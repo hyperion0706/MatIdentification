@@ -18,7 +18,7 @@ The current version is more fast and clear to read, so I put it here.
 
 Average V error MAPE on each bus, in **case1github_tol_1e-5_err_0.02_freq_5.mat**
 
-<img src = "https://github.com/AmateurZhang/MatIdentification/blob/master/MAE%20of%20voltage.jpg" width = "60%">
+<img src = "https://github.com/AmateurZhang/MatIdentification/blob/master/MAE%20of%20voltage.jpg" width = "58%">
 
 Average V error MAPE all day, in **case1github_tol_1e-5_err_0.02_freq_5.mat**
 
