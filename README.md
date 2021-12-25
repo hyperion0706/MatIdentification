@@ -29,9 +29,11 @@ V error, added by reducing pf.tol on MATPOWER, tol = 10^-5; -> 0.01% error USE m
  case1github.mat select last 30 datasets for step 2.
  case1github2.mat select all 120 dataset.
 ```
-V error MAPE on each bus, in **case1github_tol_1e-5_err_0.02_freq_5.mat**
+Average V error MAPE on each bus, in **case1github_tol_1e-5_err_0.02_freq_5.mat**
 
 ![MAPE on bus](https://github.com/AmateurZhang/MatIdentification/blob/master/MAE%20of%20voltage.jpg)
+
+Average V error MAPE all day, in **case1github_tol_1e-5_err_0.02_freq_5.mat**
 
 ![MAPE all day](https://github.com/AmateurZhang/MatIdentification/blob/master/MAPE_all_day.jpg)
 
