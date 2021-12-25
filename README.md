@@ -14,8 +14,10 @@ J. Zhang, Y. Wang, Y. Weng and N. Zhang, "Topology Identification and Line Param
 This code is refactored after the paper accepted, and the settings and performances are a bit different from that in the paper. 
 The current version is more fast and clear to read, so I put it here.
 
-**IEEE33BUSEG.m** is the looped case in TSG paper. similar settings=> **case1github_tol_1e-5_err_0.02_freq_5.mat**
+**IEEE33BUSEG.m** is the looped case in TSG paper. 
+similar settings=> **case1github_tol_1e-5_err_0.02_freq_5.mat**
 
+## Example **case1github_tol_1e-5_err_0.02_freq_5.mat**
  This case uses mpopt.pf.alg = 'GS' when adding V error, in pqloads.m
  
 Average V error MAPE on each bus, in **case1github_tol_1e-5_err_0.02_freq_5.mat**
@@ -62,7 +64,7 @@ MAPE: g: 2.795951%, b: 3.293200%; Wrong branch +/-: 0,0
 Time passed 23.939329 s。
 [Identification] Pragramme successfully ends .........
 ```
-## Example
+## Example in detail
 The current code shows a simplified and kernel version of the proposed model. **case1github.mat** and **case1github2.mat** show example data and results, with simular setups in the paper. 
 ### setups
 ```
