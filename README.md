@@ -26,6 +26,42 @@ Average V error MAPE all day, in **case1github_tol_1e-5_err_0.02_freq_5.mat**
 
 ![MAPE all day](https://github.com/AmateurZhang/MatIdentification/blob/master/MAPE_all_day.jpg)
 
+console outputs.
+```
+[Identification] Basic identification .........
+[Basic Identification] No.1 ends with error 351.846716
+ Wrong branch +/-: 152,0
+[Basic Identification] No.2 ends with error 142.661717
+ Wrong branch +/-: 28,0
+[Basic Identification] No.3 ends with error 34.061364
+ Wrong branch +/-: 6,0
+[Basic Identification] No.4 ends with error 16.319208
+ Wrong branch +/-: 6,0
+[Basic Identification] Converged after 5 iterations with error 0.000000e+00
+ Wrong branch +/-: 6,0
+Time passed 0.045129 s。
+[Identification] Fine identification .........
+[fine identification] Starts with error 1.848309e-01
+MAPE: g: 39.524188%, b: 44.896126%; Wrong branch +/-: 6,0
+[fine identification] No.1 ends with error 2.297622e-01
+MAPE: g: 26.932522%, b: 22.050802%; Wrong branch +/-: 6,0
+[fine identification] No.2 ends with error 1.655273e-01
+MAPE: g: 6.838213%, b: 9.708935%; Wrong branch +/-: 6,0
+[fine identification] No.3 ends with error 2.980222e-02
+MAPE: g: 3.390679%, b: 4.719571%; Wrong branch +/-: 6,0
+[fine identification] No.4 ends with error 1.716978e-02
+MAPE: g: 3.168593%, b: 4.340237%; Wrong branch +/-: 6,0
+[fine identification] No.5 ends with error 1.219006e-02
+MAPE: g: 3.173368%, b: 4.370341%; Wrong branch +/-: 0,0
+[fine identification] No.6 ends with error 1.173005e-03
+MAPE: g: 2.812186%, b: 3.309935%; Wrong branch +/-: 0,0
+[fine identification] No.7 ends with error 1.001502e-03
+MAPE: g: 2.797158%, b: 3.293762%; Wrong branch +/-: 0,0
+[fine identification] Ends with 8 iterations, with error 1.001505e-03
+MAPE: g: 2.795951%, b: 3.293200%; Wrong branch +/-: 0,0
+Time passed 23.939329 s。
+[Identification] Pragramme successfully ends .........
+```
 ## Example
 The current code shows a simplified and kernel version of the proposed model. **case1github.mat** and **case1github2.mat** show example data and results, with simular setups in the paper. 
 ### setups
