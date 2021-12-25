@@ -16,6 +16,8 @@ The current version is more fast and clear to read, so I put it here.
 
 **IEEE33BUSEG.m** is the looped case in TSG paper. similar settings=> **case1github_tol_1e-5_err_0.02_freq_5.mat**
 
+ This case uses mpopt.pf.alg = 'GS' when adding V error, in pqloads.m
+ 
 Average V error MAPE on each bus, in **case1github_tol_1e-5_err_0.02_freq_5.mat**
 
 <img src = "https://github.com/AmateurZhang/MatIdentification/blob/master/MAE%20of%20voltage.jpg" width = "57%">
@@ -30,7 +32,7 @@ The current code shows a simplified and kernel version of the proposed model. **
 ```
 P, Q additional error err  = 0.01; 
 
-V error, added by reducing pf.tol on MATPOWER, tol = 10^-5; -> 0.01% error USE mpopt.pf.alg = 'GS' when adding V error!
+V error, added by reducing pf.tol on MATPOWER, tol = 10^-5; -> 0.01% error
 (0.01 level error (higher bound 10-4, in statistics) usually fall around 1e-5 in real voltage measurements. )
 
 24*5 datasets, freq = 1/5;
