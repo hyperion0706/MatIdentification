@@ -177,11 +177,11 @@ classdef pqloads<matlab.mixin.Copyable
                 mpf1.bus(2:obj.bus+1,3) = obj.interploadlist(:,i);
                 mpf1.bus(2:obj.bus+1,4) = obj.interqloadlist(:,i);
                 mpopt = mpoption('verbose',0,'out.all',0);
-                q_stand = (runpf(mpf1,mpopt)); %标化
+                q_stand = (runpf(mpf1,mpopt)); 
                 
                 
                 mpopt.pf.tol = obj.tol;
-                mpopt.pf.alg = 'GS';
+                mpopt.pf.alg = 'GS'; % remove this line if you want the program to run faster. MATPOWER would use N-R method.
                 q = (runpf(mpf1,mpopt));
                 
                 for k = 2:obj.bus+1
