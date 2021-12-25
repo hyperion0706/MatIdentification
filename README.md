@@ -15,6 +15,13 @@ This code is refactored after the paper accepted, and the settings and performan
 The current version is more fast and clear to read, so I put it here.
 
 **IEEE33BUSEG.m** is the looped case in TSG paper. similar settings=> **case1github_tol_1e-5_err_0.02_freq_5.mat**
+Average V error MAPE on each bus, in **case1github_tol_1e-5_err_0.02_freq_5.mat**
+
+<img src = "https://github.com/AmateurZhang/MatIdentification/blob/master/MAE%20of%20voltage.jpg" width = "55%">
+
+Average V error MAPE all day, in **case1github_tol_1e-5_err_0.02_freq_5.mat**
+
+![MAPE all day](https://github.com/AmateurZhang/MatIdentification/blob/master/MAPE_all_day.jpg)
 
 ## Example
 The current code shows a simplified and kernel version of the proposed model. **case1github.mat** and **case1github2.mat** show example data and results, with simular setups in the paper. 
@@ -29,13 +36,7 @@ V error, added by reducing pf.tol on MATPOWER, tol = 10^-5; -> 0.01% error USE m
  case1github.mat select last 30 datasets for step 2.
  case1github2.mat select all 120 dataset.
 ```
-Average V error MAPE on each bus, in **case1github_tol_1e-5_err_0.02_freq_5.mat**
 
-<img src = "https://github.com/AmateurZhang/MatIdentification/blob/master/MAE%20of%20voltage.jpg" width = "50%">
-
-Average V error MAPE all day, in **case1github_tol_1e-5_err_0.02_freq_5.mat**
-
-![MAPE all day](https://github.com/AmateurZhang/MatIdentification/blob/master/MAPE_all_day.jpg)
 
 Other parameters:
 ```
