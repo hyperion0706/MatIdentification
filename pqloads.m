@@ -181,7 +181,8 @@ classdef pqloads<matlab.mixin.Copyable
                 
                 
                 mpopt.pf.tol = obj.tol;
-                mpopt.pf.alg = 'GS'; % remove this line if you want the program to run faster. MATPOWER would use N-R method.
+                % mpopt.pf.alg = 'GS'; % add this line, MATPOWER use GS method.
+                % remove this line if you want the program to run faster. MATPOWER would use N-R method.
                 q = (runpf(mpf1,mpopt));
                 
                 for k = 2:obj.bus+1
