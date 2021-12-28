@@ -155,6 +155,7 @@ MAPE: g: 0.606687%, b: 0.573381%; Wrong branch +/-: 0,0
 2. Experiences on tunning super-parameters are required, especially in case 1 and 3 in the paper. It may influence the accuray and correctness of parameter estimation and topology identification.
 3. The performance of the algorithm is related to the quality of datasets. Low colinear and high accurate data is welcomed.
 4. We have improved the algorithm into linear form, and the paper is under review. No speed problem later. https://ieeexplore.ieee.org/document/9459535
+5. The present researches do not consider error-in-variable model. Therefore, we require the errors in voltage magnitudes have limited influences on power flow calculation accuracy, as mentioned in Section II. Here is new research considering error-in-variable model, which makes large voltage measurement errors possible.  https://arxiv.org/abs/2106.00532
 
 ## About the usage of the code
 You can use the code in your paper/ degree thesis as control groups, comparisons, or part of your methods. Please cite our paper.
